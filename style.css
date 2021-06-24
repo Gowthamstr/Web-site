@@ -1,0 +1,903 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+/* 7.6.2021  additional added */
+
+body {
+    background-color: rgb(199, 174, 174);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(display6.jpg);
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* specific use */
+
+.banner .content h2 {
+    font-size: 3em;
+    color: #fff;
+}
+
+/* .banner .content p {
+    font-size: 1em;
+    color: #fff; */
+
+/* } */
+
+/* .btn {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.btn:hover {
+    letter-spacing: 6px;
+} */
+
+/* navigation */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 10px 100px;
+    /* box shadow like drop shadow */
+    box-shadow: 0 5px 20px rgb(0, 0, 60);
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header .logo span {
+    color: #ff0157
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    /* text decoration is dash avoid (none means avoid)*/
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+header.sticky .navigation li a {
+    color: #111;
+}
+
+header .navigation li a:hover {
+    color: #ff0157;
+}
+
+section {
+    padding: 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.titleText {
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.titleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .content .box {
+    width: 340px;
+    margin: 20px;
+    border: 1px solid rgba(233, 231, 231, 0.324);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: white;
+}
+
+.menu .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu .content .box .text {
+    padding: 15px 0 5px;
+}
+
+.menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+    text-align: center;
+}
+
+/* .card_main {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card {
+    border: 1px solid rgba(233, 231, 231, 0.324);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+}
+.card .img img {
+    width: 300px;
+    height: 200px;
+}
+.card .card_content {
+    padding: 10px;
+}
+.card .card_content h2 {
+    text-align: center;
+} */
+
+/* contact */
+
+.contact {
+    background-color: #111;
+    /* background: url(logo_2.jpg); */
+    background-size: cover;
+    /* add */
+    background-position: center;
+}
+
+.contactForm {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.contactForm h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* specific input changes */
+
+.contactForm .inputBox input, .contactForm .inputBox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.box_main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    margin: 10px 0;
+    width: 200px;
+    margin-top: none;
+}
+
+.box .box_content {
+    padding: 5px;
+    text-align: justify;
+}
+
+.box .box_content h4 {
+    text-align: justify;
+}
+
+/* .box .box_contents p{
+    padding: 5px;
+    text-align: justify;
+} */
+
+/* .box .box_content p::first-letter{
+    color: rgb(255, 60, 0);
+    font-size: 40px; */
+
+/* } */
+
+.cards {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    width: 50%;
+    margin: 40px;
+    /* my add */
+    flex-wrap: wrap;
+}
+
+.cards .cards_contents {
+    text-align: justify;
+    float: none;
+    padding-right: 50px;
+}
+
+.cards .cards_img img {
+    float: left;
+    width: 300px;
+    height: 200px;
+    padding-right: 30px;
+}
+
+/* .profile {
+    height: 350px;
+    width: 25%;
+    margin-top: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    margin-left: 100px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+.profile p {
+    margin-left: 50px;
+    display: flex;
+} */
+
+/* updates column */
+
+.updates .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+    color: rgb(1, 1, 20);
+}
+
+.updates .content .box {
+    width: 250px;
+    margin: 15px;
+}
+
+.updates .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.updates .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.updates .content .box .text {
+    padding: 15px 0 5px;
+    text-align: justify;
+}
+
+.updates .content .box .text h3 {
+    font-weight: 400;
+}
+
+.updates .content .box .text p {
+    text-align: justify;
+}
+
+/* updates */
+
+/* 
+.title {
+    margin-left: 100px;
+    font-size: 1.1em;
+} */
+
+.profile {
+    padding: 75px 50px;
+    background: rgb(252, 252, 210);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+    margin: 0 auto;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    header, header.sticky {
+        padding: 10px 20px;
+    }
+    header .navigation {
+        display: none;
+    }
+    section {
+        padding: 20px;
+    }
+    .banner .content h2 {
+        font-size: 3em;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        position: relative;
+        width: 100%;
+    }
+    .row .col50 .imgBx {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content {
+        margin-top: 20px;
+    }
+    .profile {
+        margin: 10px;
+    }
+    .updates .title h2 {
+        text-align: center;
+    }
+    .Button a {
+        margin-right: 7px;
+    }
+    .box_parent .boxs {
+        width: 100%;
+    }
+    .slider .img-box img {
+        width: 255px;
+    }
+    .slider .btn {
+        display: flex;
+    }
+    .slider .img-box .slider-img {
+        width: 265px;
+    }
+    .sliders {
+        background-size: cover;
+        background-position: center;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .sliders .principal h1 {
+        font-weight: 500;
+        color: white;
+        font-size: 50px;
+    }
+    /* .menu .content .box{
+        height: 260px;
+    } */
+    /* .menu .content .box .imgBx{
+        height: 260px;
+    } */
+}
+
+/* mobile purpose */
+
+.address_main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.address_main .address {
+    width: 300px;
+    height: 200px;
+}
+
+.address_main .address h4 {
+    color: rgb(243, 214, 47);
+    font-size: 35px;
+    font-weight: 200;
+    text-align: center;
+    font-family: Gabriola Regular;
+}
+.address_main .address p {
+    text-indent: 40px;
+    color: #fff;
+    text-align: justify;
+}
+/* BUTTON */
+.Button a {
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+}
+.Frame {
+    margin: 5%;
+}
+
+.Frame h4 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.Frame h4 p {
+    text-align: justify;
+}
+
+.Framemain {
+    text-align: justify;
+}
+
+/* mission n vission div */
+
+.update .content {
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 40px;
+    color: rgb(1, 1, 20);
+}
+
+/* gallery add */
+
+.contentt h2 {
+    text-align: center;
+}
+
+.contentt p {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.box_parent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boxs {
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.4);
+}
+
+.boxs img {
+    width: 100%;
+    height: 100%;
+}
+
+/* manual slide column */
+
+.slider {
+    margin: 50px auto;
+    width: 50%;
+}
+
+.slider .img-box h2 {
+    text-align: center;
+}
+
+.slider .img-box p {
+    text-align: justify;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: #888;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    background: rgb(241, 9, 9);
+}
+
+/*  */
+
+.update .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+    color: white;
+}
+
+.update .content .box {
+    width: 250px;
+    margin: 15px;
+}
+
+/* .updates .content .box .text {
+    padding: 15px 0 5px;
+    } */
+
+.update .content .box .text h3 {
+    font-weight: 300;
+    font-size: 2em;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.update .content .box .text h3 p {
+    text-align: justify;
+    font-size: 1.5em;
+    color: white;
+}
+
+.logo_main img {
+    width: 150px;
+    height: 150px;
+}
+
+.acuaintance P {
+    color: white;
+    text-align: center;
+}
+
+.acuaintance h2 {
+    color: rgb(243, 214, 47);
+    text-align: center;
+    font-family: Papyrus Regular;
+}
+
+/* Anim slider */
+
+.load {
+    animation: slide 2s;
+}
+.sliders {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    animation: slide 10s infinite;
+    filter: blur(0.1px);
+    /* my add */
+    padding-left: 150px;
+    padding-right: 150px;
+}
+@media (max-width: 600px) {
+    .contant .principal h2 {
+        font-size: 30px;
+    }
+    .logo_main img {
+        margin-left: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    .map_wrap iframe{
+        width: 270px;
+        height: 270px;
+    }
+    .slider .img-box p{
+        width: 200px;
+        height: 200px;
+        text-align: justify;
+    }
+    .slider .img-box .IMAGE img{
+        width: 230px;
+        height: 200px;
+        margin: 0 auto;
+    }
+}
+.contant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* black background */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 900px;
+}
+
+.principal h2 {
+    position: relative;
+    font-size: 75px;
+    font-weight: 500;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+}
+
+.principal h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    /* we can change black or green */
+    -webkit-text-stroke: 0.3vw #01fe87;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+/* .contant {
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+/* essential one */
+
+/* .principal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.principal h1 {
+    font-weight: 500;
+    color: white;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.principal p {
+    font-size: 20px;
+    color: white;
+} */
+
+@keyframes slide {
+    0% {
+        background-image: url('img1.jpg');
+    }
+    20% {
+        background-image: url('img1.jpg');
+    }
+    20.01% {
+        background-image: url('img2.jpg');
+    }
+    40% {
+        background-image: url('img2.jpg');
+    }
+    40.01% {
+        background-image: url('img3.jpg');
+    }
+    60% {
+        background-image: url('img3.jpg');
+    }
+    60.01% {
+        background-image: url('img4.jpg');
+    }
+    80% {
+        background-image: url('img4.jpg');
+    }
+    80.01% {
+        background-image: url('img5.jpg');
+    }
+    100% {
+        background-image: url('img5.jpg');
+    }
+}
+
+/* panel side........................ */
+
+/* panel side............... */
+
+.panel_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.panel_1 {
+    width: 300px;
+    height: 300px;
+    margin-right: 2%;
+}
+
+.panel_1 h2 {
+    color: white;
+    margin-left: 1px;
+    text-align: center;
+    font-family: Gabriola Regular;
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.panel_1 .navigation {
+    margin-left: 110px;
+}
+
+.panel_1 .navigation a {
+    color: black;
+    text-decoration: none;
+    color: rgb(228, 189, 18);
+    font-size: 300;
+}
+
+.panel_1 .navigation a:hover {
+    color: violet;
+    text-decoration: underline;
+}
+
+.panel_2 {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.panel_2 h2 {
+    margin-left: 30px;
+    color: white;
+    text-align: center;
+    font-family: Gabriola Regular;
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.panel_2 p {
+    text-indent: 32px;
+    text-align: justify;
+    color: rgb(228, 189, 18);
+    font-weight: 450;
+}
+
+.panel_3 {
+    color: white;
+    width: 300px;
+    height: 300px;
+}
+
+.panel_3 h2 {
+    text-align: center;
+    font-family: Gabriola Regular;
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.panel_3 h3 {
+    text-align: justify;
+}
+
+.panel_3 p {
+    color: white;
+    color: rgb(228, 189, 18);
+}
+.map_wrap h2{
+    color: white; 
+    text-align: center; 
+    font-family: Copperplate Gothic;
+}
